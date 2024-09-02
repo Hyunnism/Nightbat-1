@@ -884,16 +884,19 @@ button.active {
 
 .filterable_card {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -12%;
-  margin-top: 25px;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
   gap: 20px;
   flex-wrap: wrap;
 }
 
 .name_card {
-  flex-basis: 300px;
+  flex-basis: calc(33.33% - 20px);
   background-color: var(--primary-color);
   padding: 3px;
   border-radius: 8px;
@@ -923,6 +926,7 @@ button.active {
 
 footer {
   display: flex;
+  text-align: justify;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -934,8 +938,8 @@ footer {
 footer .footer-container {
   width: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 50px;
 }
 
 footer .footer-container .sec h2 {
@@ -975,15 +979,17 @@ footer .footer-container .sec li a i {
   font-style: 20px;
 }
 
-footer .footer-container .quicklinks {
-  position: relative;
-}
-
-footer .footer-container .quicklinks ul li {
-  color: var(--primary-color);
-  text-decoration: none;
-  margin-bottom: 10px;
-  display: inline-block;
+footer .copyrightText {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: var(--text-dark);
+  font-size: 16px;
+  border-top: 1px solid var(--text-dark);
+  box-sizing: border-box;
 }
 
 @media screen and (min-width: 1120px) {
