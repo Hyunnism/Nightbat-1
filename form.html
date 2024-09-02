@@ -50,58 +50,80 @@
             <a href="index.html"><img src="assets/AfcoProduction.png" alt="MAESTRO Pro"></a>
         </div>
         <div class="form-section">
-            <form>
+            <form id="orderForm">
                 <div class="form-group">
                     <label for="jenis-pekerjaan">Jenis Pekerjaan*</label>
-                    <select id="jenis-pekerjaan" required>
+                    <select id="jenis-pekerjaan" name="jenis_pekerjaan" required>
                         <option value="" disabled selected>Pilih Jenis Pekerjaan</option>
                         <option value="Booth">Booth</option>
-                        <option value="Booth">Pameran</option>
-                        <option value="Booth">Neon Box</option>
-                        <option value="Booth">Backdrop</option>
-                        <option value="Booth">Interior Design</option>
-                        <option value="Booth">Billboard</option>
-                        <option value="Booth">Acrylic Logo</option>
-                        <option value="Booth">Produk Custom</option>
-                        <option value="Booth">Wall Branding</option>
-                        <option value="Booth">Lainnya</option>
-                        <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
+                        <option value="Pameran">Pameran</option>
+                        <option value="Neon Box">Neon Box</option>
+                        <option value="Backdrop">Backdrop</option>
+                        <option value="Interior Design">Interior Design</option>
+                        <option value="Billboard">Billboard</option>
+                        <option value="Acrylic Logo">Acrylic Logo</option>
+                        <option value="Produk Custom">Produk Custom</option>
+                        <option value="Wall Branding">Wall Branding</option>
+                        <option value="Lainnya">Lainnya</option>
                     </select>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="nama">Nama*</label>
-                    <input type="text" id="nama" required>
+                    <input type="text" id="nama" name="nama" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="nama-perusahaan">Nama Perusahaan*</label>
-                    <input type="text" id="nama-perusahaan" required>
+                    <input type="text" id="nama-perusahaan" name="nama_perusahaan" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="no-wa">No. WA*</label>
-                    <input type="tel" id="no-wa" placeholder="Contoh: 62812345678901" required>
+                    <input type="tel" id="no-wa" name="no_wa" placeholder="Contoh: 62812345678901" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="ukuran">Ukuran*</label>
-                    <input type="text" id="ukuran" placeholder="dalam m^2" required>
+                    <input type="text" id="ukuran" name="ukuran" placeholder="dalam m^2" required>
                 </div>
-
+            
                 <div class="form-group">
                     <label for="desain">Sudah ada desain?</label>
-                    <select id="desain" required>
+                    <select id="desain" name="desain" required>
                         <option value="Sudah Ada">Sudah Ada</option>
-                        <option value="Sudah Ada">Tidak Ada</option>
-                        <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
+                        <option value="Tidak Ada">Tidak Ada</option>
                     </select>
                 </div>
-
-                <button type="submit" class="submit-btn">Tanya Ketersediaan</button>
+            
+                <button type="button" class="submit-btn" onclick="submitOrder()">Tanya Ketersediaan</button>
             </form>
+            
         </div>
     </div>
+    <script>
+        function submitOrder() {
+            // Ambil nilai dari formulir
+            const jenisPekerjaan = document.getElementById('jenis-pekerjaan').value;
+            const nama = document.getElementById('nama').value;
+            const namaPerusahaan = document.getElementById('nama-perusahaan').value;
+            const noWa = document.getElementById('no-wa').value;
+            const ukuran = document.getElementById('ukuran').value;
+            const desain = document.getElementById('desain').value;
+    
+            // Buat pesan WhatsApp
+            const message = `*Order Details*\nJenis Pekerjaan: ${jenisPekerjaan}\nNama: ${nama}\nNama Perusahaan: ${namaPerusahaan}\nNo. WA: ${noWa}\nUkuran: ${ukuran}\nDesain: ${desain}`;
+            const encodedMessage = encodeURIComponent(message);
+    
+            // Ganti dengan nomor telepon admin
+            const phoneNumber = '6285817446805'; 
+            const whatsappLink = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+    
+            // Arahkan ke WhatsApp dengan pesan
+            window.location.href = whatsappLink;
+        }
+    </script>
+    
     <script src="main.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
