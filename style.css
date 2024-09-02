@@ -160,6 +160,7 @@ nav {
 .slider-container {
   position: absolute;
   top: 60%;
+  /* Sesuaikan untuk tampilan lebih tengah */
   left: 50%;
   transform: translate(-50%, -50%);
   max-width: var(--max-width);
