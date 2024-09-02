@@ -153,8 +153,8 @@ nav {
 
 .slider-container {
   position: absolute;
-  margin-top: 100px;
-  margin-left: 45.5rem;
+  /* margin-top: 10px; */
+  margin-left: 55rem;
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: var(--max-width);
