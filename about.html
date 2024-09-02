@@ -45,6 +45,14 @@
         </div>
     </nav>
 
+    <!-- Video Slider -->
+    <div class="hero">
+        <!-- <h1>Night Bat</h1> -->
+        <video id="myVideo" autoplay loop class="myBg">
+            <source src="assets/About/introduction.mp4" type="Video/mp4">
+        </video>
+    </div>
+
     <section class="home-content">
         <div class="logo-text-container">
             <img src="assets/square_afco.jpg" alt="AFCO Logo" class="logo">
@@ -80,7 +88,44 @@
         </div>
     </section>
 
+    <footer>
+        <div class="footer-container">
+            <div class="sec aboutus">
+                <h2>Tentang Kami</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus voluptatem molestiae dicta
+                    officiis nisi optio. Itaque voluptatum excepturi necessitatibus sint ullam rerum. Corrupti, eius.
+                    Dignissimos porro quaerat necessitatibus facere atque.
+                </p>
+                <ul class="sci">
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec contact">
+                <h2>Contact Us</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class="fa-solid fa-phone"></i></span>
+                        <p><a href="">(021) 22886795</a></p>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-envelope"></i></span>
+                        <p><a href="">info@afcoproject.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
+
+    <script>
+        // Access the video element
+        const video = document.getElementById('myVideo');
+    
+        // Set the volume (0 is mute, 1 is max volume)
+        video.volume = 0.2; // 20% volume
+      </script>
     <script src="main.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </body>

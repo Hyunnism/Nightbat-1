@@ -992,6 +992,34 @@ footer .copyrightText {
   box-sizing: border-box;
 }
 
+/* Statstic Video Graph */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* color: var(--primary-color-dark); */
+  height: 100%;
+  margin-top: 50px;
+  padding: 200px 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+}
+
+.myBg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;       /* Video akan menyesuaikan dengan lebar container */
+  height: auto;      /* Tinggi video akan diatur secara proporsional */
+  object-fit: cover; /* Mengisi seluruh ruang dengan tetap menjaga aspek rasio */
+}
+
+/* Statistic End */
+
 @media screen and (min-width: 1120px) {
   :root {
     --h2-font-size: 1.5rem;
