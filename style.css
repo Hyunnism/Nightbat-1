@@ -40,6 +40,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Nav Start */
 nav {
   position: fixed;
   isolation: isolate;
@@ -156,7 +157,9 @@ nav {
   align-items: center;
   justify-content: center;
 }
+/* Nav End */
 
+/* Home Slider Start */
 .slider-container {
   position: absolute;
   top: 60%;
@@ -272,7 +275,9 @@ nav {
 .prev-buttons button:hover {
   background-color: #bac383;
 }
+/* Home Slider End */
 
+/* Header Start */
 .header_content h1 {
   margin-bottom: 1rem;
   font-size: 5rem;
@@ -373,7 +378,8 @@ nav {
   color: var(--text-light);
   text-align: center;
 }
-
+/* Header End */
+/* Form Page Start */
 .form_container {
   margin: auto;
   margin-top: 20px;
@@ -495,7 +501,9 @@ nav {
 .animated-button.clicked {
   animation: clickAnimation 0.5s forwards;
 }
+/* =Form Page End= */
 
+/* Home Content Start */
 .home-content {
   padding: 50px 20px;
   text-align: center;
@@ -594,7 +602,9 @@ nav {
   font-size: 18px;
   margin: 5px 0 0;
 }
+/* Home Content End */
 
+/* Contact Page Start */
 .contact-section {
   max-width: var(--max-width);
   text-align: center;
@@ -648,9 +658,9 @@ nav {
   margin-bottom: 20px;
   margin-left: 40px;
 }
+/* Contact Page End */
 
-
-
+/* Page Content Start */
 .page-content .text {
   position: relative;
   margin-top: 50%;
@@ -753,7 +763,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+/* Page Content End */
 
+/* Services Start */
 /*=============== CARD ===============*/
 .services-content h1 {
   margin-top: -10px;
@@ -851,6 +863,7 @@ img {
 .services-container .card__article:not(:hover) .card__data {
   animation: remove-data 1s forwards;
 }
+/* Services End */
 
 /* Comment Start */
 .l-card {
@@ -889,7 +902,7 @@ img {
 /* Comment End */
 
 
-/* Album Modified */
+/* Album Modified Start */
 .filter-button {
   display: flex;
   justify-content: center;
@@ -951,7 +964,9 @@ button.active {
   font-size: 18px;
   color: var(--text-dark);
 }
+/* Album Modified End */
 
+/* Footer Start */
 footer {
   display: flex;
   text-align: justify;
@@ -1019,6 +1034,7 @@ footer .copyrightText {
   border-top: 1px solid var(--text-dark);
   box-sizing: border-box;
 }
+/* Footer End */
 
 /* Statstic Video Graph */
 .hero {
