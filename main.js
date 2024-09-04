@@ -16,16 +16,15 @@ navLinks.addEventListener("click", (e) => {
     menuBtnIcon.setAttribute("class", "ri-menu-4-line");
 });
 
-document.getElementById('next').onclick = function(){
+document.getElementById('next').onclick = function () {
     let lists = document.querySelectorAll('.item');
     document.getElementById('slide').appendChild(lists[0]);
 }
-document.getElementById('prev').onclick = function(){
+
+document.getElementById('prev').onclick = function () {
     let lists = document.querySelectorAll('.item');
     document.getElementById('slide').prepend(lists[lists.length - 1]);
 }
-  
-
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("orderForm");
@@ -49,10 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.count');
 
     counters.forEach(counter => {
+        console.log('Counter found:', counter);  // Log ini untuk memastikan counter ditemukan
+
         const speed = +counter.getAttribute('data-speed') || 400; // Kecepatan animasi default
+        const target = +counter.getAttribute('data-target');
+        console.log('Target:', target);  // Log ini untuk melihat apakah target diambil dengan benar
 
         const updateCount = () => {
-            const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
             const increment = target / speed;
 
@@ -67,4 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCount();
     });
 });
+
+
+
+
+
+
 
